@@ -4,6 +4,8 @@ DOM insertion library
 
 ## Example
 
+Basically the [6 mutation methods][1] from DOM4
+
 ```
 var insert = require("../index")
     , prepend = insert.prepend
@@ -66,3 +68,5 @@ function createLi(text, elem) {
  - Raynos
 
 ## MIT Licenced
+
+  [1]: http://www.w3.org/TR/dom/#mutation-methods
