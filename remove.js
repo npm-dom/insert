@@ -10,5 +10,9 @@ function remove() {
 }
 
 function removeFromParent(elem) {
+    if (!elem.parentNode) {
+        return
+    }
+
     elem.parentNode.removeChild(elem)
 }
