@@ -6,5 +6,5 @@ module.exports = append
 
 function append(parent) {
     var node = mutation(toArray(arguments, 1))
-    parent.appendChild(node)
+    return parent.appendChild(node)
 }

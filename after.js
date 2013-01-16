@@ -9,5 +9,5 @@ function after(sibling) {
         , parent = sibling.parentNode
         , child = sibling.nextSibling
 
-    parent.insertBefore(node, child)
+    return parent.insertBefore(node, child)
 }

@@ -8,5 +8,5 @@ function before(sibling) {
     var node = mutation(toArray(arguments, 1))
         , parent = sibling.parentNode
 
-    parent.insertBefore(node, sibling)
+    return parent.insertBefore(node, sibling)
 }
