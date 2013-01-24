@@ -59,6 +59,18 @@ function createLi(text, elem) {
 }
 ```
 
+### Working with widgets
+
+If you pass one of the insertion methods a widget, it will do
+    the DOM operation on it's view and return the widget
+
+```js
+var chatList = append(someElem, ChatListWidget(...))
+```
+
+In this case a widget is just an old object with a property `view`
+    that is a DOM element
+
 ## Installation
 
 `npm install insert`

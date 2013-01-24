@@ -4,7 +4,8 @@ var toArray = require("to-array")
 
 module.exports = append
 
-function append(parent) {
+function append(parent, first) {
     var node = mutation(toArray(arguments, 1))
-    return parent.appendChild(node)
+    parent.appendChild(node)
+    return first
 }

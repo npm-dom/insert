@@ -3,9 +3,10 @@ var toArray = require("to-array")
 
 module.exports = replace
 
-function replace(target) {
+function replace(target, first) {
     var node = mutation(toArray(arguments, 1))
         , parent = target.parentNode
 
-    return parent.replaceChild(node, target)
+    parent.replaceChild(node, target)
+    return first
 }

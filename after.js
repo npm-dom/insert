@@ -4,10 +4,11 @@ var toArray = require("to-array")
 
 module.exports = after
 
-function after(sibling) {
+function after(sibling, first) {
     var node = mutation(toArray(arguments, 1))
         , parent = sibling.parentNode
         , child = sibling.nextSibling
 
-    return parent.insertBefore(node, child)
+    parent.insertBefore(node, child)
+    return first
 }

@@ -4,15 +4,17 @@ var toArray = require("to-array")
 
 module.exports = remove
 
-function remove() {
+function remove(first) {
     var list = toArray(arguments)
-    list.forEach(removeFromParent)
+    list.map(function (elem) {
+        if (elem && elem.view && elem.nodeType) {
+            return elem.view
+        }
 
-    if (list.length === 1) {
-        return list[0]
-    } else {
-        return document.createDocumentFragment()
-    }
+        return elem
+    }).forEach(removeFromParent)
+
+    return first
 }
 
 function removeFromParent(elem) {

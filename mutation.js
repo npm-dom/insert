@@ -15,6 +15,8 @@ function mutation(list) {
 function replaceStringWithTextNode(string) {
     if (typeof string === "string") {
         return document.createTextNode(string)
+    } else if (string && string.view && string.view.nodeType) {
+        return string.view
     }
 
     return string

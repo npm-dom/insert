@@ -4,7 +4,8 @@ var toArray = require("to-array")
 
 module.exports = prepend
 
-function prepend(parent) {
+function prepend(parent, first) {
     var node = mutation(toArray(arguments, 1))
-    return parent.insertBefore(node, parent.firstChild)
+    parent.insertBefore(node, parent.firstChild)
+    return first
 }
