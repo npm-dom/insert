@@ -7,7 +7,7 @@ module.exports = remove
 function remove(first) {
     var list = toArray(arguments)
     list.map(function (elem) {
-        if (elem && elem.view && elem.nodeType) {
+        if (elem && elem.view && elem.view.nodeType) {
             return elem.view
         }
 
